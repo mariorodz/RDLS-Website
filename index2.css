@@ -81,6 +81,13 @@ div {
     padding: 5px 5px;
 }
 
+.centralizado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 @media (max-width:768px) {
 
     .navbar .btn-navbar{
@@ -93,7 +100,9 @@ div {
         height: 50px;
         padding: 7px 15px;
     }
-    }
+
+
+}
 
 .home2 {
     background-image: linear-gradient(
@@ -110,23 +119,93 @@ div {
     margin-bottom: 20px;
 
 }
+/* CSS de los h's */
 
-    h1{
-        font-size: 100px;
-        margin-top: 50px;
-        margin-bottom: 50px;
+.jumbotron h1 {
+    font-size: 94px;
+    margin-bottom: 0;
+    letter-spacing: -0.05em;
+    line-height: 1em;
 }
 
-h3 {
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-top: 50px;
-    padding-bottom: 100px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 46px;
+        margin-bottom: 0;
+        letter-spacing: -0.05em;
+        line-height: 1em;
+        }
+    }
+
+h1, .h1 {
+    font-size: 46px;
+
+    }
+
+.jumbotron h3 {
+    font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    letter-spacing: -0.01em;
+    line-height: 1.5em;
+    padding: 5px 0 15px;
 }
 
-#caja h4 {
-  background-color: white;
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 25px;
+    margin-bottom: 12.5px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+h1 {
+    margin-right: 10px;
+    margin-left:10px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size:50px;
+    }
+} 
+
+/*CSS para que los botones se vean blancos*/
+
+.btn-default {
+    border-radius: 2px;
+    border: solid 3px #0c1f24;
+    background-color: transparent;
+}
+
+.btn-white {
+    color: #fff !important;
+    border-color: #fff !important;
+    margin: 10px 0;
+    }
+
+.btn {
+    font-weight: 100;
+    white-space: normal
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    user-select: none;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+    padding: 10px 16px;
+    font-size: 23px;
+    line-height: 1.3333333;
 }
 
 .jumbotron 
@@ -134,54 +213,147 @@ h3 {
 
 #div-pagination{clear: both;}
 
-.carousel {padding-bottom: 25px}
-.carousel img {padding-top: 20px;}
-.carousel h2 {color: #0072b5;}
-.carousel h2 small {color: #289bde}
-.carousel col-lg-4 p {text-align: center;}
+.carousel {padding-bottom: 20px}
+.carousel img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 400px;
+    width: 100%;
+    }
+.carousel h2 {
+    color: #0072b5;
+    font-weight: 100;
+    }
 
-/*Carousel del newsfeed y bloggin      */
-
-#myCarousel .carousel-caption {
-  left:0;
-	right:0;
-	bottom:0;
-	text-align:left;
-	padding:20px;
-	background:rgba(0,0,0,0.6);
-	text-shadow:none;
+.carousel p {
+    color: #289bde;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 25px;
 }
 
-#myCarousel h4 {
-    color: red;
-}
+.elmedio {
+    height: 300px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+
+/* ARREGLO CAROUSEL EN CELULAR */
+
+@media (max-width: 768px) {
+    .carousel img {
+        height: 200px;
+        width: 100%;
+        }
+    .carousel h2 {
+        font-size: 25px;
+        }
+    .carousel p {
+        font-size: 15px;
+         }
+    }
+
+
+/*CSS del NEWSFEED */
 
 #newsfeed {
-  margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
-#myCarousel .list-group {
-	position:absolute;
-	top:20px;
-	right:0;
-}
-#myCarousel .list-group-item {
-	border-radius:0px;
-	cursor:pointer;
-}
-#myCarousel .list-group .active {
-	background-color:#eee;
+#newsfeed0 {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+    box-shadow: 0 3px 3px rgba(220, 220, 220, 0.5);
+    margin: 10px 10px 10px 10px;
+   }
+
+#newsfeed1 {
+    color: #0072b5;
+    font-weight: 100;
+    text-align: center;
+    }
+
+#newsfeed2 {
+    color: #289bde;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+
+/* arreglo de News Feed en Celular */
+@media (max-width: 768px) {
+    #newsfeed1 {
+        font-size: 20px;
+        }
+    #newsfeed {
+         flex-direction: column;
+        }
+    #newsfeed2 {
+         font-size: 15px;
+        }
+    }
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+body {
+  background: #f1f1f1 none repeat scroll top left;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: normal;
 }
 
-@media (min-width: 992px) {
-	#myCarousel {padding-right:33.3333%;}
-	#myCarousel .carousel-controls {display:none;}
-}
-@media (max-width: 991px) {
-	.carousel-caption p,
-	#myCarousel .list-group {display:none;}
+a,
+a:visited {
+  color: #555;
+  outline: none;
+  text-decoration: none;
 }
 
+a:hover,
+a:focus,
+a:visited:hover {
+  color: #22a1c4;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 810px;
+  margin: 5% auto;
+  color: #95a5a6;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  line-height: normal;
+}
+
+/* CSS del news feed */
+
+aside#bott{
+    font-family: 'Open Sans', sans-serif;
+    position:static;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:5% auto 0 auto;
+    flex:none;
+    display:flex;align-items:center;
+    justify-content:center;
+    background:rgba(26,188,156,.9);
+    color:#fff;padding:1em
+}
+aside span.bott{
+    color:inherit;
+    text-decoration:none;
+    font-weight:normal;
+    display:inline-block;
+    padding:.4em 1em}
 
 /*termina stylesheet para el carousel del newsfeed y blog */
 
